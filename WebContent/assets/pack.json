@@ -1,0 +1,21 @@
+{
+  "pregame": [{
+    "type": "image",
+    "key": "pre",
+    "url": "assets/pre.png",
+    "overwrite": false
+  }],
+  "postgame": [{
+    "type": "image",
+    "key": "post",
+    "url": "assets/post.png",
+    "overwrite": false
+  }],
+  "meta": {
+    "generated": "1561615866084",
+    "app": "Phaser Editor",
+    "url": "http://phasereditor.boniatillo.com",
+    "version": "1.0",
+    "copyright": "Arian Fornaris (c) 2015,2016"
+  }
+}
