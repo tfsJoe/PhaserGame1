@@ -11,10 +11,11 @@ class Level extends Phaser.State {
 	/**
 	 * Level.
 	 */
+	
 	constructor() {
-		
 		super();
-		
+		this.preImg = {};
+		this.img2 = {};
 	}
 	
 	init() {
@@ -29,16 +30,22 @@ class Level extends Phaser.State {
 	preload () {
 		
 		this.load.pack('pregame', 'assets/pack.json');
-		
 	}
 	
 	create() {
-		this.add.text(343.9580078125, 292.224609375, 'Hello world!', {"font":"bold 20px Arial"});
+		//this.add.text(343.9580078125, 292.224609375, 'Hello world!', {"font":"bold 20px Arial"});
 		
-		this.add.sprite(270.0, 181.0, 'pre');
+		this.preImg = this.add.sprite(270.0, 181.0, 'pre');
+		this.img2 =   this.add.sprite(300.0, 187.0, 'pre');
+
+		this.preImg.inputEnabled = true;
+		this.img2.inputEnabled = true;
 		
-		
-		
+		this.preImg.events.onInputDown.add(this.clickHandler, this);
+		this.img2.events.onInputDown.add(() => {
+			alert("moo!");
+		}, this);
+		console.log(this.game);
 		
 		
 	}
@@ -46,7 +53,12 @@ class Level extends Phaser.State {
 	/* state-methods-begin */
 	// -- user code here --
 	/* state-methods-end */
-	
+	clickHandler()
+	{
+		console.log("oof");
+		alert("ouch!");
+	}
+
 }
 /* --- end generated code --- */
 // -- user code here --
