@@ -23,7 +23,7 @@ class Level extends Phaser.State {
 		this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 		this.scale.pageAlignHorizontally = true;
 		this.scale.pageAlignVertically = true;
-		this.stage.backgroundColor = '#ffffff';
+		this.stage.backgroundColor = '#99FFCC';
 		
 	}
 	
@@ -36,7 +36,7 @@ class Level extends Phaser.State {
 		//this.add.text(343.9580078125, 292.224609375, 'Hello world!', {"font":"bold 20px Arial"});
 		
 		this.preImg = this.add.sprite(270.0, 181.0, 'pre');
-		this.img2 =   this.add.sprite(300.0, 187.0, 'pre');
+		this.img2 =   this.add.sprite(300.0, 225.0, 'pre');
 
 		this.preImg.inputEnabled = true;
 		this.img2.inputEnabled = true;
